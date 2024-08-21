@@ -1,0 +1,110 @@
+// Quick Light Options Macro (paladin1)
+// This macro allows the user to quickly switch between different lighting options for the selected token.
+
+if (canvas.tokens.controlled.length !== 1) {
+  ui.notifications.warn("Please select exactly one token.");
+  return;
+}
+
+let selectedToken = canvas.tokens.controlled[0];
+
+// Define light options
+const lightOptions = {
+  "Torch": {
+    dim: 20,
+    bright: 10,
+    color: "#ffaa00",
+    animation: { type: "torch", speed: 2, intensity: 5 }
+  },
+  "Lantern": {
+    dim: 30,
+    bright: 15,
+    color: "#ffddaa",
+    animation: { type: "torch", speed: 1, intensity: 4 }
+  },
+  "Candle": {
+    dim: 5,
+    bright: 5,
+    color: "#ffe680",
+    animation: { type: "torch", speed: 1, intensity: 2 }
+  },
+  "Darkvision": {
+    dim: 60,
+    bright: 0,
+    color: "#aaffaa",
+    animation: { type: "none" }
+  },
+  "Illumination": {
+    dim: 10,
+    bright: 10,
+    color: "#ffffff",
+    animation: { type: "none" }
+  },
+  "No Light": {
+    dim: 0,
+    bright: 0,
+    color: "#000000",
+    animation: { type: "none" }
+  }
+};
+
+let dialogContent = `
+  <form>
+    <div class="form-group">
+      <label>Select a light source:</label>
+      <select id="light-source" name="light-source">
+        ${Object.keys(lightOptions).map(option => `<option value="${option}">${option}</option>`).join('')}
+      </select>
+    </div>
+  </form>
+`;
+
+new Dialog({
+  title: "Quick Light Options",
+  content: dialogContent,
+  buttons: {
+    apply: {
+      icon: "<i class='fas fa-lightbulb'></i>",
+      label: "Apply",
+      callback: (html) => {
+        const selectedLight = html.find('[name="light-source"]').val();
+        const lightConfig = lightOptions[selectedLight];
+        
+        selectedToken.document.update({
+          "light.dim": lightConfig.dim,
+          "light.bright": lightConfig.bright,
+          "light.color": lightConfig.color,
+          "light.animation": lightConfig.animation
+        });
+
+        ChatMessage.create({
+          content: `
+            <div class="light-option">
+              <h2>Light Source Changed</h2>
+              <p><b>${selectedToken.name}</b> is now using <b>${selectedLight}</b>.</p>
+            </div>
+            <style>
+              .light-option h2 {
+                color: #8b4513;
+                text-align: center;
+                margin: 0;
+              }
+              .light-option p {
+                font-size: 1.1em;
+                margin: 5px 0;
+                text-align: center;
+              }
+            </style>
+          `,
+          speaker: ChatMessage.getSpeaker({ token: selectedToken.document })
+        });
+      }
+    },
+    cancel: {
+      icon: "<i class='fas fa-times'></i>",
+      label: "Cancel"
+    }
+  },
+  default: "apply",
+  close: () => {}
+}).render(true);
