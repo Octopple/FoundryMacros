@@ -13,6 +13,7 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **Rage(Giant)**          - *Toggle token size to Large*
 * **Smite**                - *Select which smite to roll*
 * **Strike of the Giants** - *Select which giant to roll*
+* **WildSurge**            - *Flips a coin, and chooses between new and old Wild Surge Table*
 ### Macros (with my Flavor) `[changes will be needed]`
 * **Animated Skeleton**    - *Choose from dead token selection, to mention who to raise. (GM still required for token placement)*
 * **Bastian_Illumination** - *A torch of 10 bright and 10 dim, and color of green.*
@@ -27,4 +28,4 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 
 
 # INSTALLATION INSTRUCTION
-![Instructions](https://cdn.discordapp.com/attachments/1273116921935433768/1273129584912760903/image.png?ex=66c60f92&is=66c4be12&hm=c562f32009d654a09bdd34db6df74b74f1d8d26adfcd5462d155f8aa5488a75e&)
+![Instructions](https://i.imgur.com/taqh5PG.png)
