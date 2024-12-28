@@ -6,6 +6,7 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 ### Macros (without Flavor)/(with basic Flavor) `[meaning no changes needed]`
 * **Change_Size**          - *Set token Size*
 * **Change_Emotion**       - *Replaces token with 6 differnt ones*
+* **Eldritch Blast**	   - *Able to set level/invocations*
 * **Guidance**             - *Apply guidance to skill rolls*
 * **Light**                - *Apply torch*
 * **Multi-Attack**         - *Select a specific weapon to attack (a set amount of times)*

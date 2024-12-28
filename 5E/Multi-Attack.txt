@@ -32,7 +32,7 @@ const dialogContent = `
     <div class="form-group">
       <label>Weapon Modifier:</label>
       <select id="weapon-modifier" name="weapon-modifier">
-        ${[0, 1, 2, 3, 4, 5].map(val => `<option value="${val}" ${val === 3 ? "selected" : ""}>+${val}</option>`).join('')}
+        ${[0, 1, 2, 3, 4, 5].map(val => `<option value="${val}" ${val === 2 ? "selected" : ""}>+${val}</option>`).join('')}
       </select>
     </div>
     <div class="form-group">

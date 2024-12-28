@@ -1,10 +1,7 @@
-// Wild Magic Surge Macro with Dice So Nice!
-// This macro flips a coin, chooses between two embedded tables based on the result, rolls a d100, and outputs the result in chat with dice animations.
+// Wild Magic Surge Macro - Player-Friendly
+// Works without requiring GM permissions and uses simple animations.
 
-if (canvas.tokens.controlled.length === 0) {
-  ui.notifications.warn("Please select a token.");
-  return;
-}
+const useAnimations = true; // Set to false if you don't want animations
 
 // Define the Good table entries
 const goodEntries = [
@@ -90,39 +87,39 @@ const chaosEntries = [
 ];
 
 // Perform the coin flip: 1 = heads (Good), 2 = tails (Chaos)
-let coinFlipRoll = new Roll("1d2").evaluate({ async: false });
-game.dice3d?.showForRoll(coinFlipRoll);
+let coinFlipRoll = await (new Roll("1d2")).evaluate({ async: true });
+await game.dice3d?.showForRoll(coinFlipRoll); // Dice So Nice! visualization
 let coinFlip = coinFlipRoll.total;
 let selectedTableName = (coinFlip === 1) ? "Good" : "Chaos";
 let selectedTableEntries = (coinFlip === 1) ? goodEntries : chaosEntries;
 let resultMessage = (coinFlip === 1) ? "<b>Heads!</b> Rolling on the <b>Good</b> table..." : "<b>Tails!</b> Rolling on the <b>Chaos</b> table...";
 
 // Roll a d100 to determine the effect
-let roll = new Roll("1d100").evaluate({ async: false });
-game.dice3d?.showForRoll(roll);
+let roll = await (new Roll("1d100")).evaluate({ async: true });
+await game.dice3d?.showForRoll(roll); // Dice So Nice! visualization
 
 // Find the appropriate entry based on the roll result
-let effect = selectedTableEntries.find(entry => roll.total >= entry.range[0] && roll.total <= entry.range[1]).text;
+let effect = selectedTableEntries.find(entry => roll.total >= entry.range[0] && roll.total <= entry.range[1])?.text;
 
-// Output the result in chat
+// Send the result to chat
 ChatMessage.create({
-  speaker: ChatMessage.getSpeaker(),
+  speaker: { alias: "Wild Magic Surge" },
   content: `
-    <div class="coin-flip-result">
+    <div class="wild-magic-result">
       <h2>Wild Magic Surge</h2>
       <p>${resultMessage}</p>
       <p><b>Roll:</b> ${roll.total}</p>
-      <p><b>Result:</b> ${effect}</p>
+      <p><b>Result:</b> ${effect || "No valid effect found!"}</p>
     </div>
     <style>
-      .coin-flip-result {
+      .wild-magic-result {
         border: 1px solid #4b8dbf;
         padding: 10px;
         border-radius: 5px;
         background-color: #f4f4e1;
         text-align: center;
       }
-      .coin-flip-result h2 {
+      .wild-magic-result h2 {
         color: #8b4513;
         margin: 0;
       }
