@@ -1,14 +1,17 @@
 # FoundryMacros
 A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream](https://www.twitch.tv/octopple_).
 
-## Current List 5E
-
-### Macros (without Flavor)/(with basic Flavor) `[meaning no changes needed]`
+## GM Tools
 * **Change_Size**          - *Set token Size*
+* **Light**                - *Apply torch*
+* **Remove_TempEffect**    - *Remove all/chosen seleceted token's Temporary Effects*
+* **Set_MaxHP**            - *Set all tokens Max HP as an effect*
+
+## Current List 5E `[v12 broke a bunch]`
+### Macros (without Flavor)/(with basic Flavor) `[meaning no changes needed]`
 * **Change_Emotion**       - *Replaces token with 6 differnt ones*
 * **Eldritch Blast**	   - *Able to set level/invocations*
 * **Guidance**             - *Apply guidance to skill rolls*
-* **Light**                - *Apply torch*
 * **Multi-Attack**         - *Select a specific weapon to attack (a set amount of times)*
 * **Rage(Giant)**          - *Toggle token size to Large*
 * **Smite**                - *Select which smite to roll*
@@ -20,6 +23,7 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **Disguise**             - *Changes token art between two images*
 * **MagicMissile**         - *Rolls each DMG individually and can add spell level*
 * **TollTheDead**          - *Option to apply isDamaged? DMG*
+
 ## Current List PF2E
 * **Flavor_Sleep**         - *Flavor text for sleeping*
 * **Medic**                - *Options for Treat Wounds/Disease/Poison, First Aid and Stabalize*
