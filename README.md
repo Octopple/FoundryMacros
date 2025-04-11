@@ -2,13 +2,16 @@
 A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream](https://www.twitch.tv/octopple_).
 
 ## GM Tools
+* **Apply_Damage**         - *Apply damaged to the selected Token with damage type (Doens't affect resistances)*
 * **Change_Size**          - *Set token Size*
+* **Debug_HealMax**        - *Heal selected token to Max HP*
 * **Light**                - *Apply torch*
+* **MaxHP_Debuff**         - *Applies an effect that sets the selected token's Max HP to a number of rounds*
 * **Remove_TempEffect**    - *Remove all/chosen seleceted token's Temporary Effects*
-* **Set_MaxHP**            - *Set all tokens Max HP as an effect*
 
 ## Current List 5E `[v12 broke a bunch]`
 ### Macros (without Flavor)/(with basic Flavor) `[meaning no changes needed]`
+* **Aid_AspiringLeader**   - *Apply Basic buff of Aid(10 Temp Max HP) or Inspire(15 Temp HP)*
 * **Change_Emotion**       - *Replaces token with 6 differnt ones*
 * **Eldritch Blast**	   - *Able to set level/invocations*
 * **Guidance**             - *Apply guidance to skill rolls*
@@ -16,6 +19,7 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **Rage(Giant)**          - *Toggle token size to Large*
 * **Smite**                - *Select which smite to roll*
 * **Strike of the Giants** - *Select which giant to roll*
+* **UndeadThralls**        - *Apply buff to your undead minion, Adds Wizard level to HP, and Profiency to weapon damage*
 * **WildSurge**            - *Flips a coin, and chooses between new and old Wild Surge Table*
 ### Macros (with my Flavor) `[changes will be needed]`
 * **Animated Skeleton**    - *Choose from dead token selection, to mention who to raise. (GM still required for token placement)*
