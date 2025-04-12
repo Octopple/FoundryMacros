@@ -15,6 +15,7 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **Change_Emotion**       - *Replaces token with 6 differnt ones*
 * **Eldritch Blast**	   - *Able to set level/invocations*
 * **Guidance**             - *Apply guidance to skill rolls*
+* **HealingLight**         - *Roll a number of dice based on your warlock level*
 * **Multi-Attack**         - *Select a specific weapon to attack (a set amount of times)*
 * **Rage(Giant)**          - *Toggle token size to Large*
 * **Smite**                - *Select which smite to roll*
