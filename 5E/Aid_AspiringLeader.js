@@ -1,4 +1,3 @@
-// Toggle: Prompt to apply Aid and/or Aspiring Leader effects (D&D5E v4.2.2 + Foundry VTT v12)
 // Applies temporary max HP and temp HP as buffs with effects
 
 if (canvas.tokens.controlled.length !== 1) {
