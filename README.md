@@ -9,14 +9,15 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **MaxHP_Debuff**         - *Applies an effect that sets the selected token's Max HP to a number of rounds*
 * **Remove_TempEffect**    - *Remove all/chosen seleceted token's Temporary Effects*
 
-## Current List 5E `[v12 broke a bunch]`
+## Current List 5E `[v12]`
 ### Macros (without Flavor)/(with basic Flavor) `[meaning no changes needed]`
 * **Aid_AspiringLeader**   - *Apply Basic buff of Aid(10 Temp Max HP) or Inspire(15 Temp HP)*
 * **Change_Emotion**       - *Replaces token with 6 differnt ones*
 * **Eldritch Blast**	   - *Able to set level/invocations*
 * **Guidance**             - *Apply guidance to skill rolls*
 * **HealingLight**         - *Roll a number of dice based on your warlock level*
-* **Multi-Attack**         - *Select a specific weapon to attack (a set amount of times)*
+* **Multi-Attack 1**       - *Select a specific weapon to attack (a set amount of times) [Stops working at v12.331]*
+* **Multi-Attack 2**       - *Select a specific weapon to attack (a set amount of times) [Working with v12.331]*
 * **Rage(Giant)**          - *Toggle token size to Large*
 * **Smite**                - *Select which smite to roll*
 * **Strike of the Giants** - *Select which giant to roll*
@@ -34,6 +35,15 @@ A bunch of macros that I made for my FoundryVTT DnD games, for my [twitch stream
 * **Medic**                - *Options for Treat Wounds/Disease/Poison, First Aid and Stabalize*
 * **HealAmount**           - *Treat Wounds heal amount roll (Couldn't figure out how to have it roll, so I made it as a separate macro)*
 * **SkillCheck**           - *Skill check macro to not have to access character sheet. Works for selected token.*
+
+## Custom Macros for my Campaign
+* **Fall Damage**          - *Roll fall damage based on how many feet fallen*
+* **Harvest**              - *Harvest Mechanic. DC Check on what body parts can be harvested from creatures*
+* **Intent_Detect**        - *Intent Mechanic. DC Check to discover what the creatures next action would be*
+* **Intent_Show**          - *Intent Mechanic. Show what is discovered*
+* **Starter Gold**         - *Starter gold based on class*
+* **Trap_FloorSpikes**     - *Dex save to dodge out of way of spikes*
+* **Trap_Pitfall**         - *No save, straight damage*
 
 
 # INSTALLATION INSTRUCTION

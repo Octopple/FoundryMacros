@@ -143,7 +143,7 @@ const guidanceDialog = new Dialog({
                 <h2>${rollLabel} Check with Guidance</h2>
                 ${rollDetails}
                 <p><b>Ability/Skill Roll:</b> ${mainRollResult.result} = ${mainRollResult.total}</p>
-                <p><b>Guidance Roll:</b> ${guidanceRollResult.result} = ${guidanceRollResult.total}</p>
+                <p><b>Guidance Roll:</b> 1d4 = ${guidanceRollResult.total}</p>
                 <p><b>Total Roll:</b> ${mainRollResult.total} (Ability/Skill) + ${guidanceRollResult.total} (Guidance) = ${totalRoll}</p>
               </div>
               <style>

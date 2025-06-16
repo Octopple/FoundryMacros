@@ -1,4 +1,4 @@
-// Custom Multiattack Macro (undead9)
+// Custom Multiattack Macro (undead9) (Working v11)
 // This macro allows a token to perform multiple attacks and manually calculates attack and damage rolls.
 
 if (canvas.tokens.controlled.length !== 1) {
